@@ -15,3 +15,4 @@ Semigroup |
 
 # TODO:
 - Add Inline / Inlineable PRAGMAs
+- instances of Numerics for Int types
