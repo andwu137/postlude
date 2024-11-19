@@ -3,11 +3,10 @@ module Postlude.NonEmpty (
 ) where
 
 import Postlude.Base
-import qualified Postlude.List as List
 
 data NonEmpty a
     = NonEmpty
     { head :: a
-    , tail :: List.List a
+    , tail :: [a]
     }
     deriving (Show, Eq, Ord)

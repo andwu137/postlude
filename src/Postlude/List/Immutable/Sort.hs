@@ -7,17 +7,17 @@ import Postlude.Base
 import Postlude.List
 import Postlude.Semigroup
 
-quickSort :: (Ord a) => List a -> List a
+quickSort :: (Ord a) => [a] -> [a]
 quickSort = \case
-    Nil -> Nil
-    Cons x xs ->
+    [] -> []
+    x : xs ->
         let (ls, rs) = partition (<= x) xs
          in quickSort ls <> singleton x <> quickSort rs
 
-mergeSort :: (Ord a) => List a -> List a
+mergeSort :: (Ord a) => [a] -> [a]
 mergeSort = \case
-    Nil -> Nil
-    Cons x Nil -> Cons x Nil
+    [] -> []
+    [x] -> [x]
     xs ->
         let (l, r) = halve xs
          in mergeRuns (mergeSort l) (mergeSort r)
