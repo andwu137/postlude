@@ -22,6 +22,7 @@ library
       Postlude.Default
       Postlude.Either
       Postlude.Empty
+      Postlude.Error
       Postlude.Extra.List
       Postlude.Foldable
       Postlude.Function
@@ -46,7 +47,7 @@ library
   hs-source-dirs:
       src
   default-extensions:
-      TupleSections , OverloadedStrings , GeneralisedNewtypeDeriving , RecordWildCards , NamedFieldPuns , LambdaCase , BangPatterns , NoImplicitPrelude , ExplicitNamespaces
+      TupleSections , OverloadedStrings , GeneralisedNewtypeDeriving , RecordWildCards , NamedFieldPuns , LambdaCase , BangPatterns , NoImplicitPrelude , ExplicitNamespaces , FunctionalDependencies , MultiParamTypeClasses , FlexibleInstances
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
