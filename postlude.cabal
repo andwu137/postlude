@@ -14,7 +14,6 @@ library
   exposed-modules:
       Postlude
       Postlude.Alternative
-      Postlude.Applicative
       Postlude.Apply
       Postlude.Base
       Postlude.Bifunctor
@@ -23,6 +22,7 @@ library
       Postlude.Default
       Postlude.Either
       Postlude.Empty
+      Postlude.Enum
       Postlude.Error
       Postlude.Extra.List
       Postlude.Foldable
@@ -30,6 +30,7 @@ library
       Postlude.Functor
       Postlude.Index
       Postlude.Int
+      Postlude.Integer
       Postlude.List
       Postlude.List.Immutable.Sort
       Postlude.List.ListF

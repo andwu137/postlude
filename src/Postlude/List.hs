@@ -25,7 +25,6 @@ module Postlude.List (
 ) where
 
 import Postlude.Alternative
-import Postlude.Applicative
 import Postlude.Apply
 import Postlude.Base
 import Postlude.Bool
@@ -56,8 +55,6 @@ instance Apply [] where
 
 instance Pure [] where
     pure x = [x]
-
-instance Applicative []
 
 instance Monad [] where
     join = concat

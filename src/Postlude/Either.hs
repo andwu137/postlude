@@ -3,7 +3,6 @@ module Postlude.Either (
     either,
 ) where
 
-import Postlude.Applicative
 import Postlude.Apply
 import Postlude.Base
 import Postlude.Bifunctor
@@ -46,8 +45,6 @@ instance Apply (Either e) where
     (Left e) <*> _ = Left e
     _ <*> (Left e) = Left e
     (Right f) <*> (Right x) = Right (f x)
-
-instance Applicative (Either e)
 
 instance Monad (Either e) where
     mx >>= f = case mx of

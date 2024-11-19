@@ -6,8 +6,7 @@ Error | Unit <-> Empty
 
 # Inheritance Chart
 Functor -> Apply |
-            Pure -> Applicative
-                 -> Monad
+            Pure -> Monad
             Unit -> Alternative
 
 Semigroup |
