@@ -1,8 +1,12 @@
 module Postlude.Bool (
+    module Data.Bool,
     if',
     bool,
 ) where
 
+import Data.Bool (
+    otherwise,
+ )
 import Postlude.Base
 
 if' :: Bool -> a -> a -> a
