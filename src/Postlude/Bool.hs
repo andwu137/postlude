@@ -5,6 +5,7 @@ module Postlude.Bool (
 ) where
 
 import Data.Bool (
+    Bool,
     otherwise,
  )
 import Postlude.Base

@@ -1,8 +1,4 @@
 module Postlude.Base (
-    -- * Base types
-    module Data.Char,
-    module Data.Bool,
-
     -- * Base type classes
     module Data.Eq,
     module Data.Ord,
@@ -28,10 +24,6 @@ module Postlude.Base (
     module GHC.ExecutionStack,
     module GHC.Stack,
 ) where
-
--- Base types
-import Data.Bool (Bool)
-import Data.Char (Char, chr)
 
 -- IO
 import System.IO (FilePath, IO, IOMode (..))

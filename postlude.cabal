@@ -19,6 +19,7 @@ library
       Postlude.Base
       Postlude.Bifunctor
       Postlude.Bool
+      Postlude.Char
       Postlude.Default
       Postlude.Either
       Postlude.Empty
