@@ -17,7 +17,7 @@ module Postlude.Function (
     applyWhen,
 ) where
 
-import Postlude.Base
+import Postlude.Bool
 
 id :: a -> a
 id x = x
