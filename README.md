@@ -2,7 +2,7 @@
 
 Creation Classes of type (f a <-> a):
 Pure <-> Default
-Unit <-> Empty
+Error | Unit <-> Empty
 
 Functor -> Apply |
             Pure -> Applicative
