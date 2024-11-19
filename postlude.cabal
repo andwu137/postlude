@@ -27,6 +27,8 @@ library
       Postlude.Functor
       Postlude.Index
       Postlude.List
+      Postlude.List.Immutable.Sort
+      Postlude.List.ListF
       Postlude.Maybe
       Postlude.Monad
       Postlude.Monad.IO.Class
