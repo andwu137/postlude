@@ -8,4 +8,4 @@ import qualified Postlude.NonEmpty as NonEmpty
 uncons :: [a] -> Maybe.Maybe (NonEmpty.NonEmpty a)
 uncons = \case
     [] -> Maybe.Nothing
-    x : xs -> Maybe.Just (NonEmpty.NonEmpty x xs)
+    x : xs -> Maybe.Just (x NonEmpty.:| xs)
