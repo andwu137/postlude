@@ -1,14 +1,14 @@
 module Postlude.List.Immutable.Sort (
-    quicksort,
+    quickSort,
 ) where
 
 import Postlude.Base
 import Postlude.List
 import Postlude.Semigroup
 
-quicksort :: (Ord a) => List a -> List a
-quicksort = \case
+quickSort :: (Ord a) => List a -> List a
+quickSort = \case
     Nil -> Nil
     Cons x xs ->
         let (ls, rs) = partition (<= x) xs
-         in quicksort ls <> singleton x <> quicksort rs
+         in quickSort ls <> singleton x <> quickSort rs
