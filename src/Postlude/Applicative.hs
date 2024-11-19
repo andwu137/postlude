@@ -1,5 +1,5 @@
 module Postlude.Applicative (
-    Applicative (..),
+    Applicative,
 ) where
 
 import Postlude.Apply
