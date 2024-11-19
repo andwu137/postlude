@@ -1,6 +1,5 @@
 module Postlude.Functor (
     Functor (..),
-    (<<$>>),
 ) where
 
 class Functor f where
@@ -31,9 +30,9 @@ class Functor f where
     unzip :: f (a, b) -> (f a, f b)
     unzip xs = ((\(x, _) -> x) <$> xs, (\(_, x) -> x) <$> xs)
 
+    infixl 4 <<$>>
+    (<<$>>) :: (Functor g) => (a -> b) -> f (g a) -> f (g b)
+    (<<$>>) = map map map
+
 instance Functor ((->) a) where
     map f g x = f (g x)
-
-infixl 4 <<$>>
-(<<$>>) :: (Functor f, Functor g) => (a -> b) -> f (g a) -> f (g b)
-(<<$>>) = map map map
