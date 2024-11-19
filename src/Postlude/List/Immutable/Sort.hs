@@ -11,7 +11,7 @@ quickSort :: (Ord a) => [a] -> [a]
 quickSort = \case
     [] -> []
     x : xs ->
-        let (ls, rs) = partition (<= x) xs
+        let (ls, rs) = partition (< x) xs
          in quickSort ls <> singleton x <> quickSort rs
 
 mergeSort :: (Ord a) => [a] -> [a]
