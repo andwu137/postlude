@@ -17,6 +17,7 @@ library
       Postlude.Applicative
       Postlude.Apply
       Postlude.Base
+      Postlude.Bifunctor
       Postlude.Bool
       Postlude.Default
       Postlude.Either
