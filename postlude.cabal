@@ -28,6 +28,7 @@ library
       Postlude.Function
       Postlude.Functor
       Postlude.Index
+      Postlude.Int
       Postlude.List
       Postlude.List.Immutable.Sort
       Postlude.List.ListF
