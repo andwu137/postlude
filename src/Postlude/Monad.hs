@@ -7,7 +7,7 @@ import Postlude.Functor
 import Postlude.Pure
 
 class (Apply f, Pure f) => Monad f where
-    {-# MINIMAL (>>=) #-}
+    {-# MINIMAL (>>=) | join #-}
 
     (>>=) :: f a -> (a -> f b) -> f b
     x >>= f = join (map f x)
