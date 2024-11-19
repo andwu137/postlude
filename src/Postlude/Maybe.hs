@@ -1,5 +1,10 @@
 module Postlude.Maybe (
+    -- * Data Type
     Maybe (..),
+
+    -- * Extracting Values
+    maybe,
+    fromMaybe,
 ) where
 
 import Postlude.Alternative
@@ -40,9 +45,7 @@ instance Pure Maybe where
     pure = Just
 
 instance Monad Maybe where
-    mx >>= f = case mx of
-        Nothing -> Nothing
-        Just x -> f x
+    mx >>= f = maybe Nothing f mx
 
 instance Alternative Maybe where
     x <|> y = case x of
@@ -63,3 +66,11 @@ instance (Semigroup a) => Semigroup (Maybe a) where
     Just a <> Just b = Just (a <> b)
 
 instance (Semigroup a) => Monoid (Maybe a)
+
+maybe :: b -> (a -> b) -> Maybe a -> b
+maybe d f = \case
+    Nothing -> d
+    Just x -> f x
+
+fromMaybe :: b -> Maybe b -> b
+fromMaybe d = maybe d (\x -> x)
