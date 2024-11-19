@@ -65,7 +65,7 @@ instance Unit [] where
 instance Alternative [] where
     (<|>) = (<>)
 
-instance Semigroup ([] a) where
+instance Semigroup [a] where
     [] <> ys = ys
     xs <> [] = xs
     (x : xs) <> ys = x : (xs <> ys)
