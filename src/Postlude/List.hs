@@ -28,10 +28,13 @@ import Postlude.Alternative
 import Postlude.Applicative
 import Postlude.Apply
 import Postlude.Base
-import Postlude.Bool (otherwise)
+import Postlude.Bool
 import Postlude.Empty
+import Postlude.Enum
 import Postlude.Foldable
 import Postlude.Functor
+import Postlude.Index
+import Postlude.Maybe
 import Postlude.Monad
 import Postlude.Monoid
 import Postlude.Pure
@@ -74,6 +77,15 @@ instance Empty [a] where
     empty = []
 
 instance Monoid [a]
+
+instance Index [] where
+    index n
+        | n < 0 = \_ -> Nothing
+        | otherwise = \case
+            [] -> Nothing
+            x : xs
+                | n == 0 -> Just x
+                | otherwise -> index (pred n) xs
 
 {- Functions -}
 singleton :: a -> [a]
