@@ -13,6 +13,10 @@ class (Apply f, Pure f) => Monad f where
     (>>=) :: f a -> (a -> f b) -> f b
     x >>= f = join (map f x)
 
+    infixr 1 =<<
+    (=<<) :: (a -> f b) -> f a -> f b
+    f =<< x = join (map f x)
+
     infixr 1 >=>
     (>=>) :: (a -> f b) -> (b -> f c) -> a -> f c
     (f >=> g) x = f x >>= g
