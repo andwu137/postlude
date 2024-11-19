@@ -5,10 +5,11 @@ module Postlude.Apply (
 import Postlude.Functor
 
 class (Functor f) => Apply f where
-    {-# MINIMAL (<*>) #-}
+    {-# MINIMAL (<*>) | liftA2 #-}
 
     infixl 4 <*>
     (<*>) :: f (a -> b) -> f a -> f b
+    (<*>) = liftA2 (\x -> x)
 
     infixl 4 <#>
     (<#>) :: f a -> f (a -> b) -> f b
