@@ -8,7 +8,11 @@ import Postlude.Base
 
 data NonEmpty a
     = a :| [a]
-    deriving (Show, Eq, Ord)
+    deriving
+        ( Show
+        , Eq
+        , Ord
+        )
 
 head :: NonEmpty a -> a
 head (x :| _) = x

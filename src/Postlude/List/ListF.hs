@@ -9,7 +9,11 @@ import Postlude.Functor
 data ListF a f
     = FNil
     | FCons a f
-    deriving (Show, Eq, Ord)
+    deriving
+        ( Show
+        , Eq
+        , Ord
+        )
 
 instance Functor (ListF a) where
     map f = \case

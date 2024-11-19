@@ -17,7 +17,11 @@ import Postlude.Semigroup
 data Either e a
     = Left e
     | Right a
-    deriving (Show, Eq, Ord)
+    deriving
+        ( Show
+        , Eq
+        , Ord
+        )
 
 instance Functor (Either e) where
     map f = \case
