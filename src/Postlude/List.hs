@@ -54,7 +54,8 @@ halve list =
         ss Nil -> (Nil, ss)
         ss (Cons _ Nil) -> (Nil, ss)
         (Cons s ss) (Cons _ (Cons _ fs)) ->
-            (\(~(h, t)) -> (Cons s h, t)) (go ss fs)
+            let (h, t) = go ss fs
+             in (Cons s h, t)
         Nil _ -> (Nil, Nil)
 
 partition :: (a -> Bool) -> List a -> (List a, List a)
@@ -64,5 +65,9 @@ partition p =
     go = \case
         Nil -> (Nil, Nil)
         Cons x xs
-            | p x -> (\(~(f, s)) -> (Cons x f, s)) (go xs)
-            | otherwise -> (\(~(f, s)) -> (f, Cons x s)) (go xs)
+            | p x ->
+                let (f, s) = go xs
+                 in (Cons x f, s)
+            | otherwise ->
+                let (f, s) = go xs
+                 in (f, Cons x s)
