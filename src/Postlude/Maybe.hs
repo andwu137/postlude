@@ -17,6 +17,7 @@ import Postlude.Monad
 import Postlude.Monoid
 import Postlude.Pure
 import Postlude.Semigroup
+import Postlude.Traversable
 import Postlude.Unit
 
 data Maybe a
@@ -66,6 +67,11 @@ instance (Semigroup a) => Semigroup (Maybe a) where
     Just a <> Just b = Just (a <> b)
 
 instance (Semigroup a) => Monoid (Maybe a)
+
+instance Traversable Maybe where
+    traverse f = \case
+        Nothing -> pure Nothing
+        Just x -> Just <$> f x
 
 maybe :: b -> (a -> b) -> Maybe a -> b
 maybe d f = \case

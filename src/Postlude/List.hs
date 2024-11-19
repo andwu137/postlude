@@ -38,6 +38,7 @@ import Postlude.Monad
 import Postlude.Monoid
 import Postlude.Pure
 import Postlude.Semigroup
+import Postlude.Traversable
 import Postlude.Unit
 
 toList :: (Foldable t) => t a -> [a]
@@ -83,6 +84,14 @@ instance Index [] where
             x : xs
                 | n == 0 -> Just x
                 | otherwise -> index (pred n) xs
+
+instance Traversable [] where
+    traverse f =
+        go
+      where
+        go = \case
+            [] -> pure []
+            x : xs -> (:) <$> f x <*> go xs
 
 {- Functions -}
 singleton :: a -> [a]

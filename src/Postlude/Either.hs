@@ -12,6 +12,7 @@ import Postlude.Functor
 import Postlude.Monad
 import Postlude.Pure
 import Postlude.Semigroup
+import Postlude.Traversable
 
 data Either e a
     = Left e
@@ -55,6 +56,11 @@ instance Foldable (Either e) where
     foldr f d = \case
         Left _ -> d
         Right x -> f x d
+
+instance Traversable (Either e) where
+    traverse f = \case
+        Left e -> pure (Left e)
+        Right x -> Right <$> f x
 
 instance Semigroup (Either e a) where
     Left _ <> b = b
