@@ -1,7 +1,6 @@
 module Postlude.Functor (
     Functor (..),
     (<<$>>),
-    (<&>),
 ) where
 
 class Functor f where
@@ -13,6 +12,10 @@ class Functor f where
     infixl 4 <$>
     (<$>) :: (a -> b) -> f a -> f b
     (<$>) = map
+
+    infixl 1 <&>
+    (<&>) :: f a -> (a -> b) -> f b
+    x <&> f = map f x
 
     infixl 4 $>
     (<$) :: a -> f b -> f a
@@ -34,7 +37,3 @@ instance Functor ((->) a) where
 infixl 4 <<$>>
 (<<$>>) :: (Functor f, Functor g) => (a -> b) -> f (g a) -> f (g b)
 (<<$>>) = map map map
-
-infixl 1 <&>
-(<&>) :: (Functor f) => f a -> (a -> b) -> f b
-x <&> f = map f x
