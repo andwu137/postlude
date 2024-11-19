@@ -5,7 +5,6 @@ module Postlude.Monad (
 import Postlude.Apply
 import Postlude.Functor
 import Postlude.Pure
-import Postlude.Unit
 
 class (Apply f, Pure f) => Monad f where
     {-# MINIMAL (>>=) #-}
@@ -23,9 +22,3 @@ class (Apply f, Pure f) => Monad f where
 
     join :: f (f a) -> f a
     join x = x >>= \y -> y
-
-    void :: f a -> f ()
-    void = map (\_ -> ())
-
-    unzip :: f (a, b) -> (f a, f b)
-    unzip xs = ((\(x, _) -> x) <$> xs, (\(_, x) -> x) <$> xs)

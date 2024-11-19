@@ -22,6 +22,12 @@ class Functor f where
     ($>) :: f a -> b -> f b
     f $> x = map (\_ -> x) f
 
+    void :: f a -> f ()
+    void = map (\_ -> ())
+
+    unzip :: f (a, b) -> (f a, f b)
+    unzip xs = ((\(x, _) -> x) <$> xs, (\(_, x) -> x) <$> xs)
+
 instance Functor ((->) a) where
     map f g x = f (g x)
 
