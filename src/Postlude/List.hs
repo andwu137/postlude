@@ -6,6 +6,7 @@ module Postlude.List (
 
     -- * Conversions
     toList,
+    FromList (..),
 
     -- * Building
     concat,
@@ -39,6 +40,9 @@ import Postlude.Pure
 import Postlude.Semigroup
 import Postlude.Traversable
 import Postlude.Unit
+
+class FromList t a where
+    fromList :: [a] -> t a
 
 toList :: (Foldable t) => t a -> [a]
 toList = foldr (:) []
