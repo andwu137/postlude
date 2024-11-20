@@ -38,6 +38,7 @@ import Postlude.Class.Functor
 import Postlude.Class.Index
 import Postlude.Class.Monad
 import Postlude.Class.Pure
+import Postlude.Class.Recursion
 import Postlude.Class.Semigroup
 import Postlude.Class.Traversable
 import Postlude.Class.Unit

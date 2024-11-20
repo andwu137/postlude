@@ -29,11 +29,15 @@ library
       Postlude.Class.Monoid
       Postlude.Class.Numeric
       Postlude.Class.Pure
+      Postlude.Class.Recursion
       Postlude.Class.Semigroup
       Postlude.Class.Traversable
       Postlude.Class.Unit
       Postlude.Data.Bool
+      Postlude.Data.Char
       Postlude.Data.Either
+      Postlude.Data.Int
+      Postlude.Data.Integer
       Postlude.Data.List
       Postlude.Data.List.Immutable.Sort
       Postlude.Data.List.ListF
@@ -53,7 +57,7 @@ library
   hs-source-dirs:
       src
   default-extensions:
-      TupleSections , OverloadedStrings , GeneralisedNewtypeDeriving , RecordWildCards , NamedFieldPuns , LambdaCase , BangPatterns , NoImplicitPrelude , ExplicitNamespaces , FunctionalDependencies , MultiParamTypeClasses , FlexibleInstances
+      TupleSections , OverloadedStrings , GeneralisedNewtypeDeriving , RecordWildCards , NamedFieldPuns , LambdaCase , BangPatterns , NoImplicitPrelude , ExplicitNamespaces , FunctionalDependencies , MultiParamTypeClasses , FlexibleInstances , FlexibleContexts , TypeFamilies
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5

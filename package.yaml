@@ -31,3 +31,5 @@ library:
     , FunctionalDependencies
     , MultiParamTypeClasses
     , FlexibleInstances
+    , FlexibleContexts
+    , TypeFamilies
