@@ -3,9 +3,7 @@ module Postlude.Data.Natural (
     makeNatural,
 ) where
 
-import Data.Bool
 import Postlude.Base
-import Postlude.Data.Int
 import Postlude.Data.Maybe
 
 newtype Natural

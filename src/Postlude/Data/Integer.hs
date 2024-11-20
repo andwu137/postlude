@@ -1,5 +1,7 @@
 module Postlude.Data.Integer (
-    module Prelude,
+    module Postlude.Base,
 ) where
 
-import Prelude (Integer)
+import Postlude.Base (
+    Integer,
+ )

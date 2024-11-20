@@ -1,8 +1,8 @@
 module Postlude.Data.Char (
-    module Data.Char,
+    module Postlude.Base,
 ) where
 
-import Data.Char (
+import Postlude.Base (
     Char,
     chr,
  )

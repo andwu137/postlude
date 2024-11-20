@@ -1,4 +1,12 @@
+{-# OPTIONS_GHC -Wno-orphans #-}
+
 module Postlude.Base (
+    -- * Base types
+    module Data.Bool,
+    module Data.Char,
+    module Data.Int,
+    Integer,
+
     -- * Base type classes
     module Data.Eq,
     module Data.Ord,
@@ -24,6 +32,21 @@ module Postlude.Base (
     module GHC.ExecutionStack,
     module GHC.Stack,
 ) where
+
+-- Base types
+import Data.Bool (
+    Bool,
+    otherwise,
+ )
+import Data.Char (
+    Char,
+    chr,
+ )
+
+import Data.Int
+import Postlude.Class.Numeric
+import Prelude (Integer)
+import qualified Prelude
 
 -- IO
 import System.IO (FilePath, IO, IOMode (..))
@@ -57,3 +80,36 @@ import GHC.Stack (
     prettySrcLoc,
     withFrozenCallStack,
  )
+
+-- Base Type Instances
+{- Int -}
+instance Add Int where
+    (+) = (Prelude.+)
+
+instance Sub Int where
+    (-) = (Prelude.-)
+
+instance Negate Int where
+    negate = Prelude.negate
+
+instance Mul Int where
+    (*) = (Prelude.*)
+
+instance DivRound Int where
+    (//) = Prelude.div
+
+{- Integer -}
+instance Add Integer where
+    (+) = (Prelude.+)
+
+instance Sub Integer where
+    (-) = (Prelude.-)
+
+instance Negate Integer where
+    negate = Prelude.negate
+
+instance Mul Integer where
+    (*) = (Prelude.*)
+
+instance DivRound Integer where
+    (//) = Prelude.div

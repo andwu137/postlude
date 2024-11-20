@@ -3,7 +3,6 @@ module Postlude (
     module Postlude.Class.Apply,
     module Postlude.Base,
     module Postlude.Class.Bifunctor,
-    module Postlude.Data.Bool,
     module Postlude.Class.Default,
     module Postlude.Data.Either,
     module Postlude.Class.Empty,
@@ -43,7 +42,6 @@ import Postlude.Class.Pure
 import Postlude.Class.Semigroup
 import Postlude.Class.Traversable
 import Postlude.Class.Unit
-import Postlude.Data.Bool
 import Postlude.Data.Either
 import Postlude.Data.List
 import Postlude.Data.Maybe

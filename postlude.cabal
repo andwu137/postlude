@@ -33,10 +33,7 @@ library
       Postlude.Class.Traversable
       Postlude.Class.Unit
       Postlude.Data.Bool
-      Postlude.Data.Char
       Postlude.Data.Either
-      Postlude.Data.Int
-      Postlude.Data.Integer
       Postlude.Data.List
       Postlude.Data.List.Immutable.Sort
       Postlude.Data.List.ListF

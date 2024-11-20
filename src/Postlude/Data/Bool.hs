@@ -1,10 +1,10 @@
 module Postlude.Data.Bool (
-    module Data.Bool,
+    module Postlude.Base,
     if',
     bool,
 ) where
 
-import Data.Bool (
+import Postlude.Base (
     Bool,
     otherwise,
  )

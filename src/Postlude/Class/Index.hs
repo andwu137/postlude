@@ -3,7 +3,6 @@ module Postlude.Class.Index (
 ) where
 
 import Postlude.Base
-import Postlude.Data.Int
 import Postlude.Data.Maybe
 
 class Index f where

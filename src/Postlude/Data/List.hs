@@ -41,7 +41,6 @@ import Postlude.Class.Pure
 import Postlude.Class.Semigroup
 import Postlude.Class.Traversable
 import Postlude.Class.Unit
-import Postlude.Data.Bool
 import Postlude.Data.Maybe
 
 class FromList t a where

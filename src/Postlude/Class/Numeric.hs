@@ -9,7 +9,7 @@ module Postlude.Class.Numeric (
     Fractional (..),
 ) where
 
-import Postlude.Data.Integer
+import Prelude (Integer)
 
 class Add a where
     infixl 6 +
