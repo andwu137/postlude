@@ -129,10 +129,8 @@ partition p =
   where
     go = \case
         [] -> ([], [])
-        x : xs
-            | p x ->
-                let (f, s) = go xs
-                 in (x : f, s)
-            | otherwise ->
-                let (f, s) = go xs
-                 in (f, x : s)
+        x : xs ->
+            let (f, s) = go xs
+             in if p x
+                    then (x : f, s)
+                    else (f, x : s)
