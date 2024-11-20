@@ -5,7 +5,7 @@ module Postlude.ListZipper (
 import Postlude.Base
 import Postlude.Foldable
 import Postlude.Functor
-import Postlude.List ()
+import qualified Postlude.List as List
 import Postlude.Pure
 
 data ListZipper a
@@ -35,4 +35,4 @@ instance Foldable ListZipper where
     foldr f d (UnsafeListZipper{..}) =
         let rs = foldr f d _rightList
             cs = f current rs
-         in foldr f cs _leftList
+         in foldr f cs (List.reverse _leftList)
