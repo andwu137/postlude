@@ -14,9 +14,6 @@ to help students is a massive plus.
 Functor -> Apply |
             Pure -> Monad
             Unit -> Alternative
-
-Semigroup |
-    Empty -> Monoid
 ```
 
 # TODO:

@@ -14,7 +14,6 @@ import Postlude.Empty
 import Postlude.Foldable
 import Postlude.Functor
 import Postlude.Monad
-import Postlude.Monoid
 import Postlude.Pure
 import Postlude.Semigroup
 import Postlude.Traversable
@@ -65,8 +64,6 @@ instance (Semigroup a) => Semigroup (Maybe a) where
     Nothing <> b = b
     a <> Nothing = a
     Just a <> Just b = Just (a <> b)
-
-instance (Semigroup a) => Monoid (Maybe a)
 
 instance Traversable Maybe where
     traverse f = \case

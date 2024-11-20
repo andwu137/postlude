@@ -15,7 +15,6 @@ module Postlude (
     module Postlude.List,
     module Postlude.Maybe,
     module Postlude.Monad,
-    module Postlude.Monoid,
     module Postlude.Natural,
     module Postlude.NonEmpty,
     module Postlude.Numeric,
@@ -44,7 +43,6 @@ import Postlude.Index
 import Postlude.List
 import Postlude.Maybe
 import Postlude.Monad
-import Postlude.Monoid
 import Postlude.Natural
 import Postlude.NonEmpty
 import Postlude.Numeric

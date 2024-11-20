@@ -35,7 +35,6 @@ import Postlude.Functor
 import Postlude.Index
 import Postlude.Maybe
 import Postlude.Monad
-import Postlude.Monoid
 import Postlude.Pure
 import Postlude.Semigroup
 import Postlude.Traversable
@@ -73,8 +72,6 @@ instance Semigroup [a] where
 
 instance Empty [a] where
     empty = []
-
-instance Monoid [a]
 
 instance Index [] where
     index n
