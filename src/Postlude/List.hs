@@ -17,6 +17,7 @@ module Postlude.List (
 
     -- ** Searching With Predicate
     partition,
+    partitionOrd,
 
     -- * Sublists
 
@@ -134,3 +135,16 @@ partition p =
              in if p x
                     then (x : f, s)
                     else (f, x : s)
+
+partitionOrd :: (a -> Ordering) -> [a] -> ([a], [a], [a])
+partitionOrd p =
+    go
+  where
+    go = \case
+        [] -> ([], [], [])
+        x : xs ->
+            let (lt, eq, gt) = go xs
+             in case p x of
+                    LT -> (x : lt, eq, gt)
+                    EQ -> (lt, x : eq, gt)
+                    GT -> (lt, eq, x : gt)
