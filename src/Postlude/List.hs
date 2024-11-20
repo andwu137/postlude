@@ -8,8 +8,10 @@ module Postlude.List (
     toList,
     FromList (..),
 
+    -- * Transformations
+    reverse,
+
     -- * Building
-    concat,
 
     -- * Searching
 
@@ -97,6 +99,9 @@ instance Traversable [] where
 {- Functions -}
 singleton :: a -> [a]
 singleton = pure
+
+reverse :: [a] -> [a]
+reverse = foldl (\x y -> y : x) []
 
 mergeRuns :: (Ord a) => [a] -> [a] -> [a]
 mergeRuns = \cases
