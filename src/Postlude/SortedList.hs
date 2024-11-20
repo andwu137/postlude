@@ -4,6 +4,7 @@ module Postlude.SortedList (
 
 import Postlude.Base
 import Postlude.Empty
+import Postlude.Foldable
 import Postlude.Functor
 import Postlude.Index
 import Postlude.List ()
@@ -20,6 +21,7 @@ newtype SortedList a
         , Eq
         , Ord
         , Functor
+        , Foldable
         , Pure
         , Empty
         , Unit
