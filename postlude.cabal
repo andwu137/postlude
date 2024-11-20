@@ -38,6 +38,7 @@ library
       Postlude.Maybe
       Postlude.Monad
       Postlude.Monad.IO.Class
+      Postlude.Monoid
       Postlude.Natural
       Postlude.NonEmpty
       Postlude.Numeric
