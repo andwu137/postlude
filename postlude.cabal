@@ -42,6 +42,7 @@ library
       Postlude.Numeric
       Postlude.Pure
       Postlude.Semigroup
+      Postlude.SortedList
       Postlude.String
       Postlude.Text
       Postlude.Traversable
