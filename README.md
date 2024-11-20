@@ -19,3 +19,10 @@ Functor -> Apply |
 # TODO:
 - Add Inline / Inlineable PRAGMAs
 - instances of Numerics for Int types
+- Effects
+            - Transformers
+- Tree
+            - BST
+            - RandomBST
+- State Transaction (ST)
+- Lens / Optics
