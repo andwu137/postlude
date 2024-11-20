@@ -40,7 +40,6 @@ library
       Postlude.Data.Integer
       Postlude.Data.List
       Postlude.Data.List.Immutable.Sort
-      Postlude.Data.List.ListF
       Postlude.Data.List.Mutable.Sort
       Postlude.Data.ListZipper
       Postlude.Data.Maybe
