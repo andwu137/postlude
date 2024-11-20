@@ -13,43 +13,44 @@ build-type:     Simple
 library
   exposed-modules:
       Postlude
-      Postlude.Alternative
-      Postlude.Apply
       Postlude.Base
-      Postlude.Bifunctor
-      Postlude.Bool
-      Postlude.Char
-      Postlude.Default
-      Postlude.Either
-      Postlude.Empty
-      Postlude.Enum
-      Postlude.Error
+      Postlude.Class
+      Postlude.Class.Alternative
+      Postlude.Class.Apply
+      Postlude.Class.Bifunctor
+      Postlude.Class.Default
+      Postlude.Class.Empty
+      Postlude.Class.Enum
+      Postlude.Class.Error
+      Postlude.Class.Foldable
+      Postlude.Class.Functor
+      Postlude.Class.Index
+      Postlude.Class.Monad
+      Postlude.Class.Monoid
+      Postlude.Class.Numeric
+      Postlude.Class.Pure
+      Postlude.Class.Semigroup
+      Postlude.Class.Traversable
+      Postlude.Class.Unit
+      Postlude.Data.Bool
+      Postlude.Data.Char
+      Postlude.Data.Either
+      Postlude.Data.Int
+      Postlude.Data.Integer
+      Postlude.Data.List
+      Postlude.Data.List.Immutable.Sort
+      Postlude.Data.List.ListF
+      Postlude.Data.List.Mutable.Sort
+      Postlude.Data.ListZipper
+      Postlude.Data.Maybe
+      Postlude.Data.Natural
+      Postlude.Data.NonEmpty
+      Postlude.Data.SortedList
+      Postlude.Data.String
+      Postlude.Data.Text
+      Postlude.Data.Tuple
       Postlude.Extra.List
-      Postlude.Foldable
       Postlude.Function
-      Postlude.Functor
-      Postlude.Index
-      Postlude.Int
-      Postlude.Integer
-      Postlude.List
-      Postlude.List.Immutable.Sort
-      Postlude.List.ListF
-      Postlude.ListZipper
-      Postlude.Maybe
-      Postlude.Monad
-      Postlude.Monad.IO.Class
-      Postlude.Monoid
-      Postlude.Natural
-      Postlude.NonEmpty
-      Postlude.Numeric
-      Postlude.Pure
-      Postlude.Semigroup
-      Postlude.SortedList
-      Postlude.String
-      Postlude.Text
-      Postlude.Traversable
-      Postlude.Tuple
-      Postlude.Unit
   other-modules:
       Paths_postlude
   hs-source-dirs:
