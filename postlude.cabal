@@ -34,6 +34,7 @@ library
       Postlude.List
       Postlude.List.Immutable.Sort
       Postlude.List.ListF
+      Postlude.ListZipper
       Postlude.Maybe
       Postlude.Monad
       Postlude.Monad.IO.Class
