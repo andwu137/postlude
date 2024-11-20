@@ -5,6 +5,7 @@ module Postlude.Data.SortedList (
 import Postlude.Base
 import Postlude.Class.Empty
 import Postlude.Class.Foldable
+import Postlude.Class.FromList
 import Postlude.Class.Functor
 import Postlude.Class.Index
 import Postlude.Class.Pure
@@ -34,5 +35,5 @@ instance (Ord a) => Semigroup (SortedList a) where
 instance Index SortedList where
     index n (UnsafeSortedList xs) = index n xs
 
-instance (Ord a) => List.FromList SortedList a where
+instance (Ord a) => FromList SortedList a where
     fromList xs = UnsafeSortedList (List.Sort.mergeSort xs)

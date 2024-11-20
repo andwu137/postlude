@@ -6,7 +6,6 @@ module Postlude.Data.List (
 
     -- * Conversions
     toList,
-    FromList (..),
 
     -- * Transformations
     reverse,
@@ -46,9 +45,6 @@ import Postlude.Class.Semigroup
 import Postlude.Class.Traversable
 import Postlude.Class.Unit
 import Postlude.Data.Maybe
-
-class FromList t a where
-    fromList :: [a] -> t a
 
 toList :: (Foldable t) => t a -> [a]
 toList = foldr (:) []

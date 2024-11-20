@@ -23,6 +23,7 @@ library
       Postlude.Class.Enum
       Postlude.Class.Error
       Postlude.Class.Foldable
+      Postlude.Class.FromList
       Postlude.Class.Functor
       Postlude.Class.Index
       Postlude.Class.Monad
